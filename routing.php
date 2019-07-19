@@ -26,7 +26,7 @@ class routing{
         // Loop all routes
         foreach ($sitemap as $node) {
             // Replace all curly braces matches {} into word patterns (like Laravel)
-            $pattern = preg_replace('/\/{(.*?)}/', '/(.*?)', $node->getRegSlug());
+            $pattern = preg_replace('/\/{(.*?)}/', '/(.*?)', $node->getRegSlug('/'));
 
             /*var_dump(
                  '#^' . $pattern . '$#', $uri, 

@@ -78,11 +78,13 @@ class sitenode{
         }
     }
 
-    public function getRegSlug(){
-        $url = '/'. trim( $this->slug, '/'); // .'\b'.'\b' >> usefule for wp only
+    public function getRegSlug( $start_reg = '', $start_slug = '', $end_slug = '', $end_reg = ''  ){
+        
+        $url = $start_slug. trim( $this->slug, '/') . $end_slug;
+        
         foreach( $this->input as $format){
             $url .= '\/'.$format;
         }
-        return $url; // .'\/?';
+        return $start_reg . $url . $end_reg;
     }
 }
