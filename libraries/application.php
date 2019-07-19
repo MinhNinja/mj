@@ -84,8 +84,6 @@ class application{
 
         $controller = new controller();
         $controller->process();
-
-        self::generateOutput();
     }
 
     public static function generateOutput(){

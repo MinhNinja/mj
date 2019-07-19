@@ -79,5 +79,7 @@ class routing{
         
         App::process();
 
+        App::generateOutput();
+
     }
 }
