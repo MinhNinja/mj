@@ -28,8 +28,8 @@ class application{
 
     public function push($key, $sth){
         $exist = self::_($key);
-        $exist = ($exist === '') ? [] : (array)$exist;
-        array_push( $exist, $sth);
+        if(!is_array($exist)) $exist = [];
+        $exist = array_merge($exist, $sth);
         self::_($key, $exist);
     }
 
