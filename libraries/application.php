@@ -43,10 +43,12 @@ class application{
         
         switch( $object ){
             case 'user' :
-                if( !isset( self::$factory['user'] ) ){
-                    self::$factory['user'] = new user(); 
+                $user = session::get('_user');
+                if(empty($user)){
+                    $user = user::getInstance();
+                    session::set('_user', $user);
                 }
-                return self::$factory['user'];
+                return $user;
             case 'input' :
                 if( !isset( self::$factory['input'] ) ){
                     self::$factory['input'] = new input(); 
