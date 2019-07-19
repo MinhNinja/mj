@@ -21,6 +21,10 @@ use mj\config;
                 <li>Multi template support</li>
             </ul>
         </div>
+        <div class="col-12">
+            <h3>User information</h3>
+            <?php var_dump(App::use('user')) ?>
+        </div>
     </div>
     <?php echo $this->loadView('widget.demo_links') ?>
 </div>
