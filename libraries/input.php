@@ -34,12 +34,13 @@ class input{
 
     public function setUrlVar($key, $value = ''){
 
+        if (!is_array($this->url)){
+            $this->url = [];
+        } 
+        
         if (is_array($key)){
             $this->url = array_merge($this->url, $key);
         } else {
-            if (!is_array($this->url)){
-                $this->url = [];
-            } 
             $this->url[$key] = $value;
         }
     }
