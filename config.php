@@ -59,6 +59,8 @@ class config{
 
     public static $defaultLanguage = 'english';
 
+    public static $classUser = '';
+
     public static $siteName = 'Mj apllication - Demo';
     public static $siteDesc = 'Demo show how to implement MJ application';
     public static $siteUrl = 'http://101d9.vps:8888/git/minhninja-mj/public';

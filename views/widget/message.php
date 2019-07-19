@@ -5,7 +5,7 @@ use mj\libraries\helper;
 use mj\languages\text as Txt;
 use mj\config;
 
-if( App::use('user')->is('logged') ){
+if( App::use('user')->ID ){
     $msg = App::use('ss')->get('_msg');
     App::use('ss')->set('_msg', '');
 }else{

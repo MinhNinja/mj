@@ -8,7 +8,7 @@ class user{
 
     public static function getInstance(){
 
-        $className = 'mj\\models\\'.config::$classUser;
+        $className = 'mj\\'.config::$classUser;
         if( class_exists($className, false) )
             return new $className;
 
