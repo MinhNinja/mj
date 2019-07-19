@@ -44,6 +44,7 @@ class sitemap{
     public function isHome(){
 
         $current = App::use('env')->getCurrentUriPath();
+        $current = App::env()->getConfigUrl( trim( $current, '/') . '/' );
         $current = str_replace( ['http://', 'https://'], '', $current);
         $home = $this->get('home', 'url');
         $home = str_replace( ['http://', 'https://'], '', $home);
