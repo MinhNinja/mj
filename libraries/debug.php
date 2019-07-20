@@ -28,7 +28,7 @@ class debug{
         }
     }
 
-    public function show(){
+    public function show($exit = 0){
         
         if( config::$debug > 0){
 
@@ -48,6 +48,8 @@ class debug{
             echo $debug;
             if(  config::$debug === 1 ) echo '-->';
             echo '</div>';
+
+            if($exit) exit(0);
         }
     }
 }

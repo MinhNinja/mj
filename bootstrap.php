@@ -18,6 +18,11 @@ spl_autoload_register(function($className) {
         
         $className = substr($className, 3);
         $className = str_replace('\\', DIRECTORY_SEPARATOR, $className);
+
+        if(!file_exists(MJ_PATH . $className . '.php')){
+            throw new \Exception('Invalid class '.$className);
+        }
+        
         require_once MJ_PATH . $className . '.php';
 
     }
