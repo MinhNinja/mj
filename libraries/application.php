@@ -137,4 +137,11 @@ class application{
         return self::use('user');
     }
 
+    public static function userId(){
+        $user = self::use('user');
+        if( property_exists($user, 'ID')) return $user->ID;
+        if( property_exists($user, 'id')) return $user->id;
+        return 0;
+    }
+
 }

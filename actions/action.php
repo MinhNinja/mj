@@ -63,7 +63,7 @@ class action{
 
         if( !empty($redirect) ){
             //* use session to send message with user
-            if( App::use('user')->ID ){
+            if( App::userId() ){
                 $this->redirect = $redirect;
                 App::use('ss')->set('_msg', $msg);
                 App::use('ss')->set('_msg_type', $type);
