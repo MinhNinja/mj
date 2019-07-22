@@ -55,7 +55,8 @@ class config{
         ],
     ];
 
-    public static $notFoundAction = 'system';
+    public static $notFoundTask = 'system';
+    public static $notFoundAction = 'notFound';
 
     public static $defaultLanguage = 'english';
 

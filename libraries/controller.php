@@ -21,13 +21,13 @@ class controller{
         $routers = empty($this->path) ? config::$routers : config::$routers[$this->path];
         
         $task = $input->url()->find('task', 'cmd');
-        if(empty($task)) $task = config::$notFoundAction;
+        if(empty($task)) $task = config::$notFoundTask;
 
-        if( !isset($routers[$task]) ) $task = config::$notFoundAction;
+        if( !isset($routers[$task]) ) $task = config::$notFoundTask;
 
         $method = App::use('env')->getRequestMethod();
 
-        $this->actions = isset( $routers[$task][$method] ) ? $routers[$task][$method] : $routers[$task];
+        $this->actions = isset( $routers[$task][$method] ) ? $routers[$task][$method] : [config::$notFoundAction];
             
         $this->task = $task;
         $this->method = $method;
