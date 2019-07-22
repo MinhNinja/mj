@@ -1,7 +1,7 @@
 <?php
 /**
  * @package mj - PHP mini applciation for fast integration and implement
- * @version 0.1
+ * @version standalone
  * @author Pham Minh
  * @website http://minh.ninja
  * @github

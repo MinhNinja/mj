@@ -27,8 +27,12 @@ class controller{
 
         $method = App::use('env')->getRequestMethod();
 
-        $this->actions = isset( $routers[$task][$method] ) ? $routers[$task][$method] : [config::$notFoundAction];
-            
+        if(isset( $routers[$task][$method] )){
+            $this->actions = $routers[$task][$method];
+        } else {
+            $this->actions = isset($routers[$task][0]) ? $routers[$task] : ['notFound'];
+        }
+           
         $this->task = $task;
         $this->method = $method;
         

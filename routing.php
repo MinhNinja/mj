@@ -1,7 +1,7 @@
 <?php
 /**
  * @package mj - PHP mini applciation for fast integration and implement
- * @version 0.1
+ * @version standalone
  * @author Pham Minh
  * @website http://minh.ninja
  * @github
@@ -27,12 +27,6 @@ class routing{
         foreach ($sitemap as $node) {
             // Replace all curly braces matches {} into word patterns (like Laravel)
             $pattern = preg_replace('/\/{(.*?)}/', '/(.*?)', $node->getRegSlug('/'));
-
-            /*var_dump(
-                 '#^' . $pattern . '$#', $uri, 
-                preg_match_all('#^' . $pattern . '$#', $uri, $matches, PREG_OFFSET_CAPTURE)
-        
-        );*/
 
             // we have a match!
             if (preg_match_all('#^' . $pattern . '$#', $uri, $matches, PREG_OFFSET_CAPTURE)) {

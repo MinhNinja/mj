@@ -9,6 +9,9 @@ Purpose: This PHP mini application for fast integration and implement
 
 # Feature in Versions
 
+## version 0.2
+- Support RestFul API
+
 ## version 0.1
 - Multi language support
 - Nice SEF link
