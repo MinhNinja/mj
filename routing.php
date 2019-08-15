@@ -45,7 +45,7 @@ class routing{
                 }, $matches, array_keys($matches));
 
                 $tmp = [
-                    'app' => APP_NAME,
+                    'app' => config::$mjApp,
                     'task' => $node->getTask(),
                 ];
 
@@ -66,7 +66,7 @@ class routing{
         if(!$found){
             App::use('ss')->set('_msg', '404 - Page not found');
             App::use('input')->setUrlVar([
-                'app' => APP_NAME,
+                'app' => config::$mjApp,
                 'task' => 'displayError',
             ]);
         }

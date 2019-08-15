@@ -4,8 +4,6 @@
  * This index help to show demo the system
  */
 
-define( 'APP_NAME', 'Demo-Mj-Application');
-
 require_once '../bootstrap.php';
 
 // need session to send message
