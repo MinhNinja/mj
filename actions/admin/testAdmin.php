@@ -3,8 +3,8 @@
 namespace mj\actions\admin;
 
 use mj\libraries\application as App;
+use mj\libraries\action;
 use mj\languages\text as Txt;
-use mj\actions\action;
 
 class testAdmin extends action{
 
