@@ -8,6 +8,8 @@ Purpose: This PHP mini application for fast integration and implement
 - Access site by public/index.php
 
 # Feature in Versions
+- should change prepareContent into general function, where decide how should the output be
+- consider a global stores for controller, where action can pass variables
 
 ## version 0.2
 - Support RestFul API
